@@ -41,7 +41,24 @@
     <addaction name="action_P"/>
     <addaction name="action_2"/>
    </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>编辑（E）</string>
+    </property>
+    <addaction name="action_U"/>
+    <addaction name="action_R"/>
+    <addaction name="separator"/>
+    <addaction name="action_C"/>
+    <addaction name="action_X"/>
+    <addaction name="action_V"/>
+    <addaction name="separator"/>
+    <addaction name="action_A_2"/>
+    <addaction name="action_D"/>
+    <addaction name="font"/>
+    <addaction name="color"/>
+   </widget>
    <addaction name="menu_F"/>
+   <addaction name="menu_E"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -80,6 +97,51 @@
   <action name="action_2">
    <property name="text">
     <string>退出()</string>
+   </property>
+  </action>
+  <action name="action_U">
+   <property name="text">
+    <string>撤销(U)</string>
+   </property>
+  </action>
+  <action name="action_R">
+   <property name="text">
+    <string>重做 (R)</string>
+   </property>
+  </action>
+  <action name="action_C">
+   <property name="text">
+    <string>复制(C)</string>
+   </property>
+  </action>
+  <action name="action_X">
+   <property name="text">
+    <string>剪切 (X)</string>
+   </property>
+  </action>
+  <action name="action_V">
+   <property name="text">
+    <string>粘贴 (V)</string>
+   </property>
+  </action>
+  <action name="action_A_2">
+   <property name="text">
+    <string>全选(A)</string>
+   </property>
+  </action>
+  <action name="action_D">
+   <property name="text">
+    <string>日期(D)</string>
+   </property>
+  </action>
+  <action name="font">
+   <property name="text">
+    <string>字体(F)</string>
+   </property>
+  </action>
+  <action name="color">
+   <property name="text">
+    <string>颜色(C)</string>
    </property>
   </action>
  </widget>
