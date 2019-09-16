@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QLineEdit>
 #include <QLabel>
+#include <QMessageBox>
 
 
 Widget::Widget(QWidget *parent) :
@@ -13,7 +14,7 @@ Widget::Widget(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QHBoxLayout *vlayout = new QHBoxLayout (this);
+   /* QHBoxLayout *vlayout = new QHBoxLayout (this);
 
     QPushButton *button  = new QPushButton ();
     button->setText("计算");
@@ -31,7 +32,7 @@ Widget::Widget(QWidget *parent) :
     vlayout->addWidget(secondnum);
     vlayout->addWidget(label2);
     vlayout->addWidget(result);
-    vlayout->addWidget(button);
+    vlayout->addWidget(button);*/
 
 }
 void Widget::OnClickbutton()
@@ -42,4 +43,26 @@ void Widget::OnClickbutton()
 Widget::~Widget()
 {
     delete ui;
+}
+
+void Widget::on_pushButton_clicked()
+{
+    this->close();
+}
+
+void Widget::on_pushButton_2_clicked()
+{
+    QString userid = ui->lineEdit->text();
+    QString password = ui->lineEdit_2->text();
+    if(userid=="522169305"&&password=="123456789")
+    {
+        QMessageBox::information(this,"Info","登陆成功");
+        this->close();
+    }
+    else
+        {
+            QMessageBox::information(this,"Info","登陆失败！");
+            this->close();
+        }
+
 }
