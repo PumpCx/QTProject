@@ -73,3 +73,18 @@ void MainWindow::init()
 {
       file = new QFile(this);
 }
+
+void MainWindow::on_saveButton_clicked()
+{
+   QString filename =  QFileDialog::getSaveFileName(this,"Save","../..","Text(*.txt);;Image(*.igp,*.png)");
+
+    if(filename.isEmpty())
+    {
+        QMessageBox::warning(this,"Save Error","Save file fail !");
+        return;
+    }
+    file->setFileName(filename);
+
+
+
+}
